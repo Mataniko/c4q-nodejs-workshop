@@ -1,0 +1,11 @@
+doctype html
+html
+  head
+    title Create a new user
+  body
+    form(name="user", action="/user", method="post")        
+      label(for="username") Username       
+      input#username(type="text", name="username")
+      label(for="password") Password
+      input#password(type="password" name="password")        
+      button(type="submit", name="post") Submit

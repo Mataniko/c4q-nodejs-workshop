@@ -1,0 +1,10 @@
+doctype html
+html
+  head
+    title User Profile
+  body
+    for user in users
+      div.user
+        span User ID: #{user.id} 
+        span Username: #{user.username} 
+        span Password: #{user.password} 

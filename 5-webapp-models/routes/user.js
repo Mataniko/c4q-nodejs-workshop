@@ -4,7 +4,13 @@ var router = express.Router();
 var User = require('./../models/user')
 
 router.get('/', function(req, res) {    
-    
+    User.find({}, function(err, docs) {
+        res.render('user', { users: docs })
+    })
+});
+
+router.get('/new', function(req, res) {
+    res.render('new_user');
 });
 
 router.post('/', function(req, res) {
@@ -15,7 +21,7 @@ router.post('/', function(req, res) {
         if (err) res.send(err);
 
         console.log(user);
-        res.send(user);
+        res.send('User created!');     
     })    
 });
 
