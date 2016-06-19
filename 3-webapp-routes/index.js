@@ -1,8 +1,8 @@
 var express = require('express');
-var routes = require('./routes/index')
+var hello = require('./routes/index')
 
 var app = express();
-app.use('/hello', routes);
+app.use('/hello', hello);
 
 app.get('/', function(req, res) {
     res.sendStatus(200)

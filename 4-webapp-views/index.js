@@ -1,10 +1,10 @@
 var express = require('express');
-var routes = require('./routes/index')
+var hello = require('./routes/index')
 var app = express();
 
 app.set('view engine', 'jade')
 
-app.use('/hello', routes);
+app.use('/hello', hello);
 
 app.get('/', function(req, res) {
     res.render('index', {
