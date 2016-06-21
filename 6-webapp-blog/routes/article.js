@@ -9,12 +9,12 @@ router.get('/', function(req, res) {
     find({}).
     sort({ updated_at: -1 }).
     exec(function(err, docs) {        
-        res.render('article', { articles: docs, summary: true });
+        res.render('article', { title: 'My Blog', articles: docs, summary: true });
     });        
 });
 
 router.get('/new', function(req, res) {
-    res.render('new_article');
+    res.render('new_article', { title: 'My Blog' });
 });
 
 router.get('/:id', function(req, res) {
@@ -24,7 +24,7 @@ router.get('/:id', function(req, res) {
             return;
         }
 
-        res.render('article', { articles: [ doc ], summary: false});
+        res.render('article', { title: 'My Blog', articles: [ doc ], summary: false});
     });
 });
 
