@@ -1,0 +1,17 @@
+extends layout 
+
+block content  
+  if (articles.length)
+    for article in articles 
+      h2 
+        a(href='/article/' + article.id)= article.title
+      span= article.updated_at      
+      if (summary)
+        p= article.body.substr(0, 200) + '...'
+      else
+        p= article.body
+      p Written by: #{article.author} at #{article.created_at}
+  else
+    h2 No articles yet.
+  p
+    a(href='/article/new') Create new article

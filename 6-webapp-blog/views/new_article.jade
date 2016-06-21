@@ -1,0 +1,15 @@
+extends layout 
+
+block content
+  form(name="newarticle", action="/article", method="post")
+    .form-group
+        label.control-label(for="title") Title       
+        input.form-control#title(type="text", name="title")
+    .form-group
+        label.control-label(for="author") Author
+        input.form-control#body(name="author")
+    .form-group
+        label.control-label(for="body") Body
+        textarea.form-control#body(name="body")    
+    .form-group
+        button.btn.btn-default(type="submit", name="article") Submit

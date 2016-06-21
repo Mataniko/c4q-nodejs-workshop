@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    title My Blog
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css')
+  body
+    nav.navbar.navbar-default.navbar-fixed-top
+      .container
+        .navbar-header
+          a.navbar-brand(href="/") Matan's Blog
+        ul.nav.navbar-nav.navbar-right
+          li
+            a(href='/article') Articles
+    block content
